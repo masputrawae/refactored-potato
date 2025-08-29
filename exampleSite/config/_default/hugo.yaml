@@ -5,6 +5,9 @@ timeZone: Asia/Jakarta
 enableEmoji: true
 enableGitInfo: true
 
+#===================
+# CASCADE
+#===================
 cascade:
   - _target:
       path: /dummy/**
@@ -13,12 +16,18 @@ cascade:
       path: '{/about,/disclaimer,/license,/privacy-policy}'
     repoBasePath: main-pages
 
+#===================
+# TAXONOMIES
+#===================
 taxonomies:
   tag: tags
   category: categories
   stage: stage
   source: source
 
+#===================
+# CUSTOM OUTPUT
+#===================
 mediaType: 'application/json'
 outputFormats:
   search:
@@ -48,6 +57,9 @@ outputs:
     - search
     - manifest
 
+#===================
+# MODULE & MOUNTS
+#===================
 module:
   hugoVersion:
     extended: true

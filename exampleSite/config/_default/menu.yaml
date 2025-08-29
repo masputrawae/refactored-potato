@@ -1,3 +1,6 @@
+#===================
+# MAIN MENU
+#===================
 main:
   - name: Home
     pageRef: /
@@ -10,7 +13,11 @@ main:
     weight: 30
   - name: Tags
     pageRef: /tags/
+    weight: 40
 
+#===================
+# SOCIAL MEDIA
+#===================
 social:
   - name: Twitter X
     url: https://example.com/
@@ -37,6 +44,9 @@ social:
     params: {icon: "rss"}
     weight: 50
 
+#===================
+# FOOTER DOCUMENTS MENUS
+#===================
 documents:
   - name: About Putra
     url: /about
