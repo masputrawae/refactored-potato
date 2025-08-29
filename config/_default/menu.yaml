@@ -36,3 +36,23 @@ social:
     url: index.xml
     params: {icon: "rss"}
     weight: 50
+
+documents:
+  - name: About Putra
+    url: /about
+    weight: 10
+  - name: Disclaimer
+    url: /disclaimer
+    weight: 20
+  - name: License
+    url: /license
+    weight: 30
+  - name: Privacy Policy
+    url: /privacy-policy
+    weight: 40
+  - name: Credits
+    url: /credits
+    weight: 50
+  - name: Email
+    url: mailto:masputrawae.official@gmail.com
+    weight: 60
