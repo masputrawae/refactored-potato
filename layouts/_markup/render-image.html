@@ -19,8 +19,8 @@
     {{- if strings.HasPrefix . "height=" -}}
       {{- $height = replace . "height=" "" -}}
     {{- end -}}
-    {{- if strings.HasPrefix . "class=" -}}
-      {{- $class = replace . "class=" "" -}}
+    {{- if strings.HasPrefix . "float=" -}}
+      {{- $float = replace . "float=" "" -}}
     {{- end -}}
     {{- if strings.HasPrefix . "link=" -}}
       {{- $link = replace . "link=" "" -}}
@@ -44,7 +44,7 @@
   {{- end -}}
   {{- $fallback_image := ($image.Resize (print "789x jpg " $image_quality)) -}}
 
-<figure role="figure" aria-label="{{- $label | plainify -}}" class="figure {{ $class }}">
+<figure role="figure" aria-label="{{- $label | plainify -}}" class="figure {{ $float }}">
   {{ with $link }}<a href="{{ . }}">{{ end }}
   <img
     alt="{{- $caption | markdownify | plainify -}}"
