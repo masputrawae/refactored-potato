@@ -5,6 +5,20 @@ timeZone: Asia/Jakarta
 enableEmoji: true
 enableGitInfo: true
 
+cascade:
+  - _target:
+      path: /dummy/**
+    repoBasePath: notes
+  - _target:
+      path: '{/about,/disclaimer,/license,/privacy-policy}'
+    repoBasePath: main-pages
+
+taxonomies:
+  tag: tags
+  category: categories
+  stage: stage
+  source: source
+
 mediaType: 'application/json'
 outputFormats:
   search:
@@ -43,11 +57,16 @@ module:
     # CONTENT
     - source: notes
       target: content
+    
+    - source: main-pages
+      target: content
+
     - source: content
       target: content
 
     # ASSETS
     - source: node_modules/bootstrap-icons/icons
       target: assets/icons
+
     - source: assets
       target: assets

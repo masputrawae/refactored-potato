@@ -3,7 +3,7 @@
     <nav class="footer__nav">
       <strong class="footer__label">Social Media: </strong>
       {{- range . }}
-        <a href="{{ .URL }}" class="footer__social-link">
+        <a href="{{ .URL }}" class="footer__social-link" target="_blank" rel="noopener noreferrer">
           {{ with .Params.icon }}
             {{ partial "components/icon.html" (dict "name" . "width" 16 "height" 16) }}
           {{ end }}
@@ -13,23 +13,15 @@
     </nav>
   {{ end }}
   {{ with site.Menus.documents }}
-    <nav class="footer__nav" style="font-size: 14px;">
-      <strong class="footer__label">Doc: </strong>
+    <nav class="footer__nav">
+      <strong class="footer__label">Special Pages: </strong>
       {{- range . }}
-        <a href="{{ .URL }}" class="footer__social-link">
-          {{ with .Params.icon }}
-            {{ partial "components/icon.html" (dict "name" . "width" 16 "height" 16) }}
-          {{ end }}
-          {{ .Name }}
-        </a>
+        <a href="{{ .URL }}" class="footer__social-link">{{ .Name }}</a>
       {{- end }}
     </nav>
   {{ end }}
-
-  <p class="footer__copyright" id="footer-message"></p>
-  <p class="footer__copyright">
-    &copy; {{ site.Title }} · {{ now.Year }} · All Rights Reserved
-  </p>
+  <p class="footer__copyright" style="font-family: serif;" id="footer-message"></p>
+  <p class="footer__copyright">&copy; {{ site.Title }} · {{ now.Year }} · All Rights Reserved</p>
 </footer>
 <style>
   #footer-message {

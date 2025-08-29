@@ -41,11 +41,11 @@ code:not(pre code) {
       font-size: 80%;
       border-radius: 0.25em;
     }
+  }
 
-    &.copied code::after {
-      content: "✅ Copied";
-      color: var(--success);
-    }
+  &.copied code::after {
+    content: "✅ Copied";
+    color: var(--success);
   }
 }
 
