@@ -121,9 +121,14 @@
     justify-content: end;
     padding: 0.25em 0.75em;
     color: var(--primary);
+    cursor: pointer;
 
     &--is-active {
       color: var(--second-color);
+    }
+
+    &--is-disable {
+      color: var(--danger);
     }
   }
 }
