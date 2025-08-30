@@ -1,6 +1,7 @@
 @use "../abstracts/mixins" as m;
 
 .search {
+  margin-block: 1rem;
   &__label {
     @include m.flex-justify(center, center);
     gap: 1em;
