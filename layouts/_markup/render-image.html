@@ -36,22 +36,22 @@
 {{- end -}}
 
 <figure class="figure {{ $float }}" {{ with $width }}style="max-width: {{ . }}px;"{{ end }}>
-  {{ with $link }}<a href="{{ . }}">{{ end }}
+  {{- with $link }}<a href="{{ . }}">{{- end }}
   <img
-    {{ if $resized }}
-      src="{{ $resized.RelPermalink }}"
-      width="{{ $resized.Width }}"
-      height="{{ $resized.Height }}"
-    {{ else }}
+    {{- if $resized }}
+      src="{{- $resized.RelPermalink }}"
+      width="{{- $resized.Width }}"
+      height="{{- $resized.Height }}"
+    {{- else }}
       src="{{ if strings.HasPrefix .Destination "http" }}{{ .Destination }}{{ else }}{{ .Destination | absURL }}{{ end }}"
-      {{ with $width }}width="{{ . }}"{{ end }}
-      {{ with $height }}height="{{ . }}"{{ end }}
-    {{ end }}
+      {{- with $width }}width="{{ . }}"{{ end }}
+      {{- with $height }}height="{{ . }}"{{ end }}
+    {{- end }}
     alt="{{ $caption | plainify }}"
     title="{{ $caption | plainify }}"
     loading="lazy"
     decoding="async"
     class="figure__image"
-  />{{ with $link }}</a>{{ end }}
+  />{{ with $link }}</a>{{ end }} <!-- END IMAGE -->
   {{ if $caption }}<figcaption class="figure__caption">{{ $caption }}</figcaption>{{ end }}
 </figure>
