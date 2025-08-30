@@ -36,3 +36,8 @@ Thumbs.db
 .trash
 
 # Sementara
+# Ignore symlinks ke project my_site
+config
+content
+notes
+static
